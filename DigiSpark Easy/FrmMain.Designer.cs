@@ -40,7 +40,7 @@
             this.btnGUIr = new System.Windows.Forms.Button();
             this.btnGUIx = new System.Windows.Forms.Button();
             this.grp2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAltF4 = new System.Windows.Forms.Button();
             this.btnDer = new System.Windows.Forms.Button();
             this.btnTab = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -162,7 +162,7 @@
             // 
             // grp2
             // 
-            this.grp2.Controls.Add(this.button1);
+            this.grp2.Controls.Add(this.btnAltF4);
             this.grp2.Controls.Add(this.btnDer);
             this.grp2.Controls.Add(this.btnTab);
             this.grp2.Controls.Add(this.btnDelete);
@@ -177,16 +177,17 @@
             this.grp2.TabIndex = 6;
             this.grp2.TabStop = false;
             // 
-            // button1
+            // btnAltF4
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(151, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 36);
-            this.button1.TabIndex = 12;
-            this.button1.Tag = "KEY_F4";
-            this.button1.Text = "Alt+F4";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAltF4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAltF4.Location = new System.Drawing.Point(151, 103);
+            this.btnAltF4.Name = "btnAltF4";
+            this.btnAltF4.Size = new System.Drawing.Size(67, 36);
+            this.btnAltF4.TabIndex = 12;
+            this.btnAltF4.Tag = "KEY_F4";
+            this.btnAltF4.Text = "Alt+F4";
+            this.btnAltF4.UseVisualStyleBackColor = true;
+            this.btnAltF4.Click += new System.EventHandler(this.btnAltF4_Click);
             // 
             // btnDer
             // 
@@ -209,6 +210,7 @@
             this.btnTab.Tag = "KEY_TAB";
             this.btnTab.Text = "TAB";
             this.btnTab.UseVisualStyleBackColor = true;
+            this.btnTab.Click += new System.EventHandler(this.btnEnter_Click_1);
             // 
             // btnDelete
             // 
@@ -219,6 +221,7 @@
             this.btnDelete.Tag = "KEY_DELETE";
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnEnter_Click_1);
             // 
             // btnAbajo
             // 
@@ -253,6 +256,7 @@
             this.btnEspacio.Tag = "KEY_SPACE";
             this.btnEspacio.Text = "SPACE";
             this.btnEspacio.UseVisualStyleBackColor = true;
+            this.btnEspacio.Click += new System.EventHandler(this.btnEnter_Click_1);
             // 
             // btnEnter
             // 
@@ -263,6 +267,7 @@
             this.btnEnter.Tag = "KEY_ENTER";
             this.btnEnter.Text = "ENTER";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click_1);
             // 
             // btnIzq
             // 
@@ -363,7 +368,7 @@
         private System.Windows.Forms.Button btnIzq;
         private System.Windows.Forms.TextBox txtDefiniciones;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAltF4;
         private System.Windows.Forms.TextBox txtDelayDefault;
         private System.Windows.Forms.Button btnDelayDefault;
     }

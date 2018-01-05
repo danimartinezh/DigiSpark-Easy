@@ -1,0 +1,10 @@
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\bin\Debug\DigiSpark Easy.exe.config
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\bin\Debug\DigiSpark Easy.exe
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\bin\Debug\DigiSpark Easy.pdb
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark Easy.csprojResolveAssemblyReference.cache
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark_Easy.FrmMain.resources
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark_Easy.Properties.Resources.resources
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark Easy.csproj.GenerateResource.Cache
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark Easy.csproj.CoreCompileInputs.cache
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark Easy.exe
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark Easy.pdb

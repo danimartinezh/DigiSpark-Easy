@@ -77,5 +77,47 @@ namespace DigiSpark_Easy
             }
         }
 
+        private void btnEnter_Click_1(object sender, EventArgs e)
+        {
+            txtScript.AppendText("DigiKeyboard.sendKeyStroke(" + ((Button)sender).Tag + ");" + "\r\n");
+            txtScript.AppendText("DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n");
+            switch (((Button)sender).Tag)
+            {
+                case "KEY_TAB":
+                    if (!txtDefiniciones.Text.Contains(((Button)sender).Tag.ToString()))
+                    {
+                        txtDefiniciones.AppendText("#define " + ((Button)sender).Tag + " 43" + "\r\n");
+                    }
+                    break;
+                case "KEY_DELETE":
+                    if (!txtDefiniciones.Text.Contains(((Button)sender).Tag.ToString()))
+                    {
+                        txtDefiniciones.AppendText("#define " + ((Button)sender).Tag + " 42" + "\r\n");
+                    }
+                    break;
+                case "KEY_ENTER":
+                    if (!txtDefiniciones.Text.Contains(((Button)sender).Tag.ToString()))
+                    {
+                        txtDefiniciones.AppendText("#define " + ((Button)sender).Tag + " 40" + "\r\n");
+                    }
+                    break;
+                case "KEY_SPACE":
+                    if (!txtDefiniciones.Text.Contains(((Button)sender).Tag.ToString()))
+                    {
+                        txtDefiniciones.AppendText("#define " + ((Button)sender).Tag + " 44" + "\r\n");
+                    }
+                    break;
+            }
+        }
+
+        private void btnAltF4_Click(object sender, EventArgs e)
+        {
+            txtScript.AppendText("DigiKeyboard.sendKeyStroke(" + ((Button)sender).Tag + ",MOD_ALT_LEFT);" + "\r\n");
+            txtScript.AppendText("DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n");
+            if (!txtDefiniciones.Text.Contains(((Button)sender).Tag.ToString()))
+            {
+                txtDefiniciones.AppendText("#define " + ((Button)sender).Tag + " 61" + "\r\n");
+            }
+        }
     }
 }
