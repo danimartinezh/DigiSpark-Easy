@@ -219,5 +219,13 @@ namespace DigiSpark_Easy
                 txtDefiniciones.AppendText("#define KEY_F11 0x44" + "\r\n");
             }
         }
+
+        private void wiFiAccessPointToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtScript.Text += "DigiKeyboard.println(\"netsh wlan set hostednetwork mode)allow ssid)digispark key)123456789\");" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.println(\"netsh wlan start hostednetwork\");" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n";
+        }
     }
 }

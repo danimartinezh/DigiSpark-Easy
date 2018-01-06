@@ -56,13 +56,14 @@
             this.menu = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarFD = new System.Windows.Forms.SaveFileDialog();
             this.scriptsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cMDAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opción1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opción2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fakeUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windows10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarFD = new System.Windows.Forms.SaveFileDialog();
+            this.wiFiAccessPointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grp1.SuspendLayout();
             this.grp2.SuspendLayout();
             this.menu.SuspendLayout();
@@ -370,21 +371,16 @@
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
-            // 
-            // guardarFD
-            // 
-            this.guardarFD.DefaultExt = "ino";
-            this.guardarFD.Filter = "Todos los Archivos |*.*";
-            this.guardarFD.Title = "Guardar fichero de texto";
             // 
             // scriptsToolStripMenuItem
             // 
             this.scriptsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cMDAdminToolStripMenuItem,
-            this.fakeUpdateToolStripMenuItem});
+            this.fakeUpdateToolStripMenuItem,
+            this.wiFiAccessPointToolStripMenuItem});
             this.scriptsToolStripMenuItem.Name = "scriptsToolStripMenuItem";
             this.scriptsToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.scriptsToolStripMenuItem.Text = "Scripts";
@@ -395,7 +391,7 @@
             this.opción1ToolStripMenuItem,
             this.opción2ToolStripMenuItem});
             this.cMDAdminToolStripMenuItem.Name = "cMDAdminToolStripMenuItem";
-            this.cMDAdminToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cMDAdminToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.cMDAdminToolStripMenuItem.Text = "CMD (Admin)";
             // 
             // opción1ToolStripMenuItem
@@ -417,7 +413,7 @@
             this.fakeUpdateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.windows10ToolStripMenuItem});
             this.fakeUpdateToolStripMenuItem.Name = "fakeUpdateToolStripMenuItem";
-            this.fakeUpdateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fakeUpdateToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.fakeUpdateToolStripMenuItem.Text = "FakeUpdate";
             // 
             // windows10ToolStripMenuItem
@@ -426,6 +422,19 @@
             this.windows10ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.windows10ToolStripMenuItem.Text = "Windows 10";
             this.windows10ToolStripMenuItem.Click += new System.EventHandler(this.windows10ToolStripMenuItem_Click);
+            // 
+            // guardarFD
+            // 
+            this.guardarFD.DefaultExt = "ino";
+            this.guardarFD.Filter = "Todos los Archivos |*.*";
+            this.guardarFD.Title = "Guardar fichero de texto";
+            // 
+            // wiFiAccessPointToolStripMenuItem
+            // 
+            this.wiFiAccessPointToolStripMenuItem.Name = "wiFiAccessPointToolStripMenuItem";
+            this.wiFiAccessPointToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.wiFiAccessPointToolStripMenuItem.Text = "Wi-Fi Access Point";
+            this.wiFiAccessPointToolStripMenuItem.Click += new System.EventHandler(this.wiFiAccessPointToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -494,6 +503,7 @@
         private System.Windows.Forms.ToolStripMenuItem opción2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fakeUpdateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem windows10ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wiFiAccessPointToolStripMenuItem;
     }
 }
 
