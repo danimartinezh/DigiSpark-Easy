@@ -57,6 +57,12 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarFD = new System.Windows.Forms.SaveFileDialog();
+            this.scriptsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cMDAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opción1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opción2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fakeUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windows10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grp1.SuspendLayout();
             this.grp2.SuspendLayout();
             this.menu.SuspendLayout();
@@ -344,7 +350,8 @@
             // menu
             // 
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem});
+            this.archivoToolStripMenuItem,
+            this.scriptsToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(878, 24);
@@ -372,6 +379,53 @@
             this.guardarFD.DefaultExt = "ino";
             this.guardarFD.Filter = "Todos los Archivos |*.*";
             this.guardarFD.Title = "Guardar fichero de texto";
+            // 
+            // scriptsToolStripMenuItem
+            // 
+            this.scriptsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cMDAdminToolStripMenuItem,
+            this.fakeUpdateToolStripMenuItem});
+            this.scriptsToolStripMenuItem.Name = "scriptsToolStripMenuItem";
+            this.scriptsToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.scriptsToolStripMenuItem.Text = "Scripts";
+            // 
+            // cMDAdminToolStripMenuItem
+            // 
+            this.cMDAdminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opción1ToolStripMenuItem,
+            this.opción2ToolStripMenuItem});
+            this.cMDAdminToolStripMenuItem.Name = "cMDAdminToolStripMenuItem";
+            this.cMDAdminToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cMDAdminToolStripMenuItem.Text = "CMD (Admin)";
+            // 
+            // opción1ToolStripMenuItem
+            // 
+            this.opción1ToolStripMenuItem.Name = "opción1ToolStripMenuItem";
+            this.opción1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.opción1ToolStripMenuItem.Text = "Opción 1";
+            this.opción1ToolStripMenuItem.Click += new System.EventHandler(this.opción1ToolStripMenuItem_Click);
+            // 
+            // opción2ToolStripMenuItem
+            // 
+            this.opción2ToolStripMenuItem.Name = "opción2ToolStripMenuItem";
+            this.opción2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.opción2ToolStripMenuItem.Text = "Opción 2";
+            this.opción2ToolStripMenuItem.Click += new System.EventHandler(this.opción2ToolStripMenuItem_Click);
+            // 
+            // fakeUpdateToolStripMenuItem
+            // 
+            this.fakeUpdateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.windows10ToolStripMenuItem});
+            this.fakeUpdateToolStripMenuItem.Name = "fakeUpdateToolStripMenuItem";
+            this.fakeUpdateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fakeUpdateToolStripMenuItem.Text = "FakeUpdate";
+            // 
+            // windows10ToolStripMenuItem
+            // 
+            this.windows10ToolStripMenuItem.Name = "windows10ToolStripMenuItem";
+            this.windows10ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.windows10ToolStripMenuItem.Text = "Windows 10";
+            this.windows10ToolStripMenuItem.Click += new System.EventHandler(this.windows10ToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -434,6 +488,12 @@
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog guardarFD;
+        private System.Windows.Forms.ToolStripMenuItem scriptsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cMDAdminToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opción1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opción2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fakeUpdateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem windows10ToolStripMenuItem;
     }
 }
 

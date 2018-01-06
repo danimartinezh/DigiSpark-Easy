@@ -13,6 +13,7 @@ namespace DigiSpark_Easy
 {
     public partial class FrmMain : Form
     {
+        String script = "";
         public FrmMain()
         {
             InitializeComponent();
@@ -142,6 +143,81 @@ namespace DigiSpark_Easy
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void opción1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtScript.Text += "DigiKeyboard.delay("+txtDelayDefault.Text+");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_X, MOD_GUI_LEFT);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.println(\"a\");" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_TAB);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_TAB);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_ENTER);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n";
+            if (!txtDefiniciones.Text.Contains(btnTab.Tag.ToString()))
+            {
+                txtDefiniciones.AppendText("#define " + btnTab.Tag + " 43" + "\r\n");
+            }
+            if (!txtDefiniciones.Text.Contains(btnEnter.Tag.ToString()))
+            {
+                txtDefiniciones.AppendText("#define " + btnEnter.Tag + " 40" + "\r\n");
+            }
+        }
+
+        private void opción2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtScript.Text += "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.println(\"C>&Windows&System32\");" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_C);" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_M);" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_D);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_F10, MOD_SHIFT_LEFT);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_A);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_A);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_ENTER);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_LEFTARROW);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_ENTER);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n";
+            if (!txtDefiniciones.Text.Contains("#define MOD_SHIFT_LEFT (1<<1)"))
+            {
+                txtDefiniciones.AppendText("#define MOD_SHIFT_LEFT (1<<1)" + "\r\n");
+            }
+            if (!txtDefiniciones.Text.Contains("#define KEY_F10 0x43"))
+            {
+                txtDefiniciones.AppendText("#define KEY_F10 0x43" + "\r\n");
+            }
+            if (!txtDefiniciones.Text.Contains("#define KEY_LEFTARROW 80"))
+            {
+                txtDefiniciones.AppendText("#define KEY_LEFTARROW 80" + "\r\n");
+            }
+        }
+
+        private void windows10ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtScript.Text += "DigiKeyboard.delay("+txtDelayDefault.Text+");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.println(\"iexplore http>&&fakeupdate.net&win10u&index.html\");" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_F11);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n";
+            if (!txtDefiniciones.Text.Contains("#define KEY_F11 0x44"))
+            {
+                txtDefiniciones.AppendText("#define KEY_F11 0x44" + "\r\n");
+            }
         }
     }
 }
