@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -118,6 +119,29 @@ namespace DigiSpark_Easy
             {
                 txtDefiniciones.AppendText("#define " + ((Button)sender).Tag + " 61" + "\r\n");
             }
+        }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String str = "";
+            StreamWriter sW;
+            if (guardarFD.ShowDialog() == DialogResult.OK)
+            {
+                sW = new StreamWriter(guardarFD.FileName, true);
+                str += txtDefiniciones.Text+"\n";
+                str += "void setup() {" + "\n" + "DigiKeyboard.sendKeyStroke(0);" + "\n";
+                str += txtScript.Text + "}" + "\n";
+                str += "void loop() {"+"\n"+"}";
+                sW.WriteLine(str);
+                sW.Close();
+                sW.Dispose();
+                MessageBox.Show("Fichero guardado con exito!","DigiSpark Easy",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+        }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
