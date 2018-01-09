@@ -34,7 +34,7 @@
             this.txtDelay = new System.Windows.Forms.TextBox();
             this.txtString = new System.Windows.Forms.TextBox();
             this.btnString = new System.Windows.Forms.Button();
-            this.grp1 = new System.Windows.Forms.GroupBox();
+            this.grpControl = new System.Windows.Forms.GroupBox();
             this.btnGUI = new System.Windows.Forms.Button();
             this.btnGUId = new System.Windows.Forms.Button();
             this.btnGUIr = new System.Windows.Forms.Button();
@@ -62,11 +62,25 @@
             this.opción2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fakeUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windows10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarFD = new System.Windows.Forms.SaveFileDialog();
             this.wiFiAccessPointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grp1.SuspendLayout();
+            this.dnsPoisoningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarFD = new System.Windows.Forms.SaveFileDialog();
+            this.grpDNS = new System.Windows.Forms.GroupBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.listaDNS = new System.Windows.Forms.ListView();
+            this.IP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Dominio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtDNS = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtIP = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.grpControl.SuspendLayout();
             this.grp2.SuspendLayout();
             this.menu.SuspendLayout();
+            this.grpDNS.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtScript
@@ -74,10 +88,11 @@
             this.txtScript.Location = new System.Drawing.Point(12, 31);
             this.txtScript.Multiline = true;
             this.txtScript.Name = "txtScript";
-            this.txtScript.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtScript.Size = new System.Drawing.Size(549, 552);
+            this.txtScript.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtScript.Size = new System.Drawing.Size(549, 374);
             this.txtScript.TabIndex = 0;
             this.txtScript.TabStop = false;
+            this.txtScript.WordWrap = false;
             // 
             // btnDelay
             // 
@@ -118,18 +133,18 @@
             this.btnString.UseVisualStyleBackColor = true;
             this.btnString.Click += new System.EventHandler(this.btnString_Click);
             // 
-            // grp1
+            // grpControl
             // 
-            this.grp1.Controls.Add(this.btnGUI);
-            this.grp1.Controls.Add(this.btnGUId);
-            this.grp1.Controls.Add(this.btnGUIr);
-            this.grp1.Controls.Add(this.btnGUIx);
-            this.grp1.Location = new System.Drawing.Point(568, 170);
-            this.grp1.Name = "grp1";
-            this.grp1.Size = new System.Drawing.Size(300, 54);
-            this.grp1.TabIndex = 5;
-            this.grp1.TabStop = false;
-            this.grp1.Text = "GUI (CNTRL+)";
+            this.grpControl.Controls.Add(this.btnGUI);
+            this.grpControl.Controls.Add(this.btnGUId);
+            this.grpControl.Controls.Add(this.btnGUIr);
+            this.grpControl.Controls.Add(this.btnGUIx);
+            this.grpControl.Location = new System.Drawing.Point(568, 170);
+            this.grpControl.Name = "grpControl";
+            this.grpControl.Size = new System.Drawing.Size(300, 54);
+            this.grpControl.TabIndex = 5;
+            this.grpControl.TabStop = false;
+            this.grpControl.Text = "GUI (CNTRL+)";
             // 
             // btnGUI
             // 
@@ -335,7 +350,7 @@
             this.txtDelayDefault.Name = "txtDelayDefault";
             this.txtDelayDefault.Size = new System.Drawing.Size(100, 20);
             this.txtDelayDefault.TabIndex = 2;
-            this.txtDelayDefault.Text = "0";
+            this.txtDelayDefault.Text = "500";
             // 
             // btnDelayDefault
             // 
@@ -355,7 +370,7 @@
             this.scriptsToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(878, 24);
+            this.menu.Size = new System.Drawing.Size(884, 24);
             this.menu.TabIndex = 11;
             this.menu.Text = "menu";
             // 
@@ -380,7 +395,8 @@
             this.scriptsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cMDAdminToolStripMenuItem,
             this.fakeUpdateToolStripMenuItem,
-            this.wiFiAccessPointToolStripMenuItem});
+            this.wiFiAccessPointToolStripMenuItem,
+            this.dnsPoisoningToolStripMenuItem});
             this.scriptsToolStripMenuItem.Name = "scriptsToolStripMenuItem";
             this.scriptsToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.scriptsToolStripMenuItem.Text = "Scripts";
@@ -397,14 +413,14 @@
             // opción1ToolStripMenuItem
             // 
             this.opción1ToolStripMenuItem.Name = "opción1ToolStripMenuItem";
-            this.opción1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.opción1ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.opción1ToolStripMenuItem.Text = "Opción 1";
             this.opción1ToolStripMenuItem.Click += new System.EventHandler(this.opción1ToolStripMenuItem_Click);
             // 
             // opción2ToolStripMenuItem
             // 
             this.opción2ToolStripMenuItem.Name = "opción2ToolStripMenuItem";
-            this.opción2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.opción2ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.opción2ToolStripMenuItem.Text = "Opción 2";
             this.opción2ToolStripMenuItem.Click += new System.EventHandler(this.opción2ToolStripMenuItem_Click);
             // 
@@ -419,15 +435,9 @@
             // windows10ToolStripMenuItem
             // 
             this.windows10ToolStripMenuItem.Name = "windows10ToolStripMenuItem";
-            this.windows10ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.windows10ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.windows10ToolStripMenuItem.Text = "Windows 10";
             this.windows10ToolStripMenuItem.Click += new System.EventHandler(this.windows10ToolStripMenuItem_Click);
-            // 
-            // guardarFD
-            // 
-            this.guardarFD.DefaultExt = "ino";
-            this.guardarFD.Filter = "Todos los Archivos |*.*";
-            this.guardarFD.Title = "Guardar fichero de texto";
             // 
             // wiFiAccessPointToolStripMenuItem
             // 
@@ -436,17 +446,147 @@
             this.wiFiAccessPointToolStripMenuItem.Text = "Wi-Fi Access Point";
             this.wiFiAccessPointToolStripMenuItem.Click += new System.EventHandler(this.wiFiAccessPointToolStripMenuItem_Click);
             // 
+            // dnsPoisoningToolStripMenuItem
+            // 
+            this.dnsPoisoningToolStripMenuItem.Name = "dnsPoisoningToolStripMenuItem";
+            this.dnsPoisoningToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.dnsPoisoningToolStripMenuItem.Text = "Dns Poisoning";
+            this.dnsPoisoningToolStripMenuItem.Click += new System.EventHandler(this.dnsPoisoningToolStripMenuItem_Click);
+            // 
+            // guardarFD
+            // 
+            this.guardarFD.DefaultExt = "ino";
+            this.guardarFD.Filter = "Todos los Archivos |*.*";
+            this.guardarFD.Title = "Guardar fichero de texto";
+            // 
+            // grpDNS
+            // 
+            this.grpDNS.Controls.Add(this.btnLimpiar);
+            this.grpDNS.Controls.Add(this.btnEliminar);
+            this.grpDNS.Controls.Add(this.btnModificar);
+            this.grpDNS.Controls.Add(this.listaDNS);
+            this.grpDNS.Controls.Add(this.btnAdd);
+            this.grpDNS.Controls.Add(this.txtDNS);
+            this.grpDNS.Controls.Add(this.label3);
+            this.grpDNS.Controls.Add(this.txtIP);
+            this.grpDNS.Controls.Add(this.label2);
+            this.grpDNS.Location = new System.Drawing.Point(12, 411);
+            this.grpDNS.Name = "grpDNS";
+            this.grpDNS.Size = new System.Drawing.Size(549, 187);
+            this.grpDNS.TabIndex = 12;
+            this.grpDNS.TabStop = false;
+            this.grpDNS.Text = "DNS Poisoning";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(383, 148);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(152, 30);
+            this.btnLimpiar.TabIndex = 8;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(383, 112);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(152, 30);
+            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(383, 76);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(152, 30);
+            this.btnModificar.TabIndex = 6;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // listaDNS
+            // 
+            this.listaDNS.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IP,
+            this.Dominio});
+            this.listaDNS.FullRowSelect = true;
+            this.listaDNS.GridLines = true;
+            this.listaDNS.Location = new System.Drawing.Point(14, 45);
+            this.listaDNS.MultiSelect = false;
+            this.listaDNS.Name = "listaDNS";
+            this.listaDNS.Size = new System.Drawing.Size(363, 136);
+            this.listaDNS.TabIndex = 5;
+            this.listaDNS.UseCompatibleStateImageBehavior = false;
+            this.listaDNS.View = System.Windows.Forms.View.Details;
+            // 
+            // IP
+            // 
+            this.IP.Text = "IP";
+            this.IP.Width = 153;
+            // 
+            // Dominio
+            // 
+            this.Dominio.Text = "Dominio";
+            this.Dominio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Dominio.Width = 206;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(383, 40);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(152, 30);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Añadir";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtDNS
+            // 
+            this.txtDNS.Location = new System.Drawing.Point(231, 19);
+            this.txtDNS.Name = "txtDNS";
+            this.txtDNS.Size = new System.Drawing.Size(146, 20);
+            this.txtDNS.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(180, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Dominio:";
+            // 
+            // txtIP
+            // 
+            this.txtIP.Location = new System.Drawing.Point(34, 19);
+            this.txtIP.Name = "txtIP";
+            this.txtIP.Size = new System.Drawing.Size(140, 20);
+            this.txtIP.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "IP:";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 601);
+            this.ClientSize = new System.Drawing.Size(884, 601);
+            this.Controls.Add(this.grpDNS);
             this.Controls.Add(this.txtDelayDefault);
             this.Controls.Add(this.btnDelayDefault);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDefiniciones);
             this.Controls.Add(this.grp2);
-            this.Controls.Add(this.grp1);
+            this.Controls.Add(this.grpControl);
             this.Controls.Add(this.txtString);
             this.Controls.Add(this.btnString);
             this.Controls.Add(this.txtDelay);
@@ -458,10 +598,12 @@
             this.Name = "FrmMain";
             this.Text = "DigiSpark Easy";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.grp1.ResumeLayout(false);
+            this.grpControl.ResumeLayout(false);
             this.grp2.ResumeLayout(false);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            this.grpDNS.ResumeLayout(false);
+            this.grpDNS.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,7 +616,7 @@
         private System.Windows.Forms.TextBox txtDelay;
         private System.Windows.Forms.TextBox txtString;
         private System.Windows.Forms.Button btnString;
-        private System.Windows.Forms.GroupBox grp1;
+        private System.Windows.Forms.GroupBox grpControl;
         private System.Windows.Forms.Button btnGUI;
         private System.Windows.Forms.Button btnGUId;
         private System.Windows.Forms.Button btnGUIr;
@@ -504,6 +646,19 @@
         private System.Windows.Forms.ToolStripMenuItem fakeUpdateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem windows10ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem wiFiAccessPointToolStripMenuItem;
+        private System.Windows.Forms.GroupBox grpDNS;
+        private System.Windows.Forms.ListView listaDNS;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtDNS;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtIP;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColumnHeader Dominio;
+        private System.Windows.Forms.ColumnHeader IP;
+        private System.Windows.Forms.ToolStripMenuItem dnsPoisoningToolStripMenuItem;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
 
