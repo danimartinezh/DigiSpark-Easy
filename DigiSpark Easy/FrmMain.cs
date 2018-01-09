@@ -238,6 +238,8 @@ namespace DigiSpark_Easy
                 ListViewItem item = new ListViewItem(txtIP.Text);
                 item.SubItems.Add(txtDNS.Text);
                 listaDNS.Items.Add(item);
+                txtIP.Text = "";
+                txtDNS.Text = "";
             }
         }
 
