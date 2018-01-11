@@ -8,3 +8,5 @@ C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark Eas
 C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark Easy.csproj.CoreCompileInputs.cache
 C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark Easy.exe
 C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark Easy.pdb
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark_Easy.FrmFicheroScript.resources
+C:\Users\Dani\source\repos\DigiSpark Easy\DigiSpark Easy\obj\Debug\DigiSpark_Easy.FrmSmtp.resources

@@ -60,10 +60,12 @@
             this.cMDAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opción1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opción2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opción3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fakeUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windows10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wiFiAccessPointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dnsPoisoningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descargarYEjecutarArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarFD = new System.Windows.Forms.SaveFileDialog();
             this.grpDNS = new System.Windows.Forms.GroupBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -77,6 +79,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sMTPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enviarArchivoPorCorreoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpControl.SuspendLayout();
             this.grp2.SuspendLayout();
             this.menu.SuspendLayout();
@@ -367,7 +372,8 @@
             // 
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
-            this.scriptsToolStripMenuItem});
+            this.scriptsToolStripMenuItem,
+            this.configuraciónToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(884, 24);
@@ -396,7 +402,9 @@
             this.cMDAdminToolStripMenuItem,
             this.fakeUpdateToolStripMenuItem,
             this.wiFiAccessPointToolStripMenuItem,
-            this.dnsPoisoningToolStripMenuItem});
+            this.dnsPoisoningToolStripMenuItem,
+            this.descargarYEjecutarArchivoToolStripMenuItem,
+            this.enviarArchivoPorCorreoToolStripMenuItem});
             this.scriptsToolStripMenuItem.Name = "scriptsToolStripMenuItem";
             this.scriptsToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.scriptsToolStripMenuItem.Text = "Scripts";
@@ -405,31 +413,39 @@
             // 
             this.cMDAdminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opción1ToolStripMenuItem,
-            this.opción2ToolStripMenuItem});
+            this.opción2ToolStripMenuItem,
+            this.opción3ToolStripMenuItem});
             this.cMDAdminToolStripMenuItem.Name = "cMDAdminToolStripMenuItem";
-            this.cMDAdminToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.cMDAdminToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.cMDAdminToolStripMenuItem.Text = "CMD (Admin)";
             // 
             // opción1ToolStripMenuItem
             // 
             this.opción1ToolStripMenuItem.Name = "opción1ToolStripMenuItem";
-            this.opción1ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.opción1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.opción1ToolStripMenuItem.Text = "Opción 1";
             this.opción1ToolStripMenuItem.Click += new System.EventHandler(this.opción1ToolStripMenuItem_Click);
             // 
             // opción2ToolStripMenuItem
             // 
             this.opción2ToolStripMenuItem.Name = "opción2ToolStripMenuItem";
-            this.opción2ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.opción2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.opción2ToolStripMenuItem.Text = "Opción 2";
             this.opción2ToolStripMenuItem.Click += new System.EventHandler(this.opción2ToolStripMenuItem_Click);
+            // 
+            // opción3ToolStripMenuItem
+            // 
+            this.opción3ToolStripMenuItem.Name = "opción3ToolStripMenuItem";
+            this.opción3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.opción3ToolStripMenuItem.Text = "Opción 3";
+            this.opción3ToolStripMenuItem.Click += new System.EventHandler(this.opción3ToolStripMenuItem_Click);
             // 
             // fakeUpdateToolStripMenuItem
             // 
             this.fakeUpdateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.windows10ToolStripMenuItem});
             this.fakeUpdateToolStripMenuItem.Name = "fakeUpdateToolStripMenuItem";
-            this.fakeUpdateToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.fakeUpdateToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.fakeUpdateToolStripMenuItem.Text = "FakeUpdate";
             // 
             // windows10ToolStripMenuItem
@@ -442,16 +458,23 @@
             // wiFiAccessPointToolStripMenuItem
             // 
             this.wiFiAccessPointToolStripMenuItem.Name = "wiFiAccessPointToolStripMenuItem";
-            this.wiFiAccessPointToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.wiFiAccessPointToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.wiFiAccessPointToolStripMenuItem.Text = "Wi-Fi Access Point";
             this.wiFiAccessPointToolStripMenuItem.Click += new System.EventHandler(this.wiFiAccessPointToolStripMenuItem_Click);
             // 
             // dnsPoisoningToolStripMenuItem
             // 
             this.dnsPoisoningToolStripMenuItem.Name = "dnsPoisoningToolStripMenuItem";
-            this.dnsPoisoningToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.dnsPoisoningToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.dnsPoisoningToolStripMenuItem.Text = "Dns Poisoning";
             this.dnsPoisoningToolStripMenuItem.Click += new System.EventHandler(this.dnsPoisoningToolStripMenuItem_Click);
+            // 
+            // descargarYEjecutarArchivoToolStripMenuItem
+            // 
+            this.descargarYEjecutarArchivoToolStripMenuItem.Name = "descargarYEjecutarArchivoToolStripMenuItem";
+            this.descargarYEjecutarArchivoToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.descargarYEjecutarArchivoToolStripMenuItem.Text = "Descargar y ejecutar archivo";
+            this.descargarYEjecutarArchivoToolStripMenuItem.Click += new System.EventHandler(this.descargarYEjecutarArchivoToolStripMenuItem_Click);
             // 
             // guardarFD
             // 
@@ -575,6 +598,30 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "IP:";
             // 
+            // configuraciónToolStripMenuItem
+            // 
+            this.configuraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sMTPToolStripMenuItem});
+            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.configuraciónToolStripMenuItem.Text = "Configuración";
+            // 
+            // sMTPToolStripMenuItem
+            // 
+            this.sMTPToolStripMenuItem.Enabled = false;
+            this.sMTPToolStripMenuItem.Name = "sMTPToolStripMenuItem";
+            this.sMTPToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sMTPToolStripMenuItem.Text = "SMTP (Gmail)";
+            this.sMTPToolStripMenuItem.Click += new System.EventHandler(this.sMTPToolStripMenuItem_Click);
+            // 
+            // enviarArchivoPorCorreoToolStripMenuItem
+            // 
+            this.enviarArchivoPorCorreoToolStripMenuItem.Enabled = false;
+            this.enviarArchivoPorCorreoToolStripMenuItem.Name = "enviarArchivoPorCorreoToolStripMenuItem";
+            this.enviarArchivoPorCorreoToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
+            this.enviarArchivoPorCorreoToolStripMenuItem.Text = "Enviar archivo por correo";
+            this.enviarArchivoPorCorreoToolStripMenuItem.Click += new System.EventHandler(this.enviarArchivoPorCorreoToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,6 +643,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menu;
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DigiSpark Easy";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.grpControl.ResumeLayout(false);
@@ -659,6 +707,11 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.ToolStripMenuItem opción3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem descargarYEjecutarArchivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sMTPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enviarArchivoPorCorreoToolStripMenuItem;
     }
 }
 
